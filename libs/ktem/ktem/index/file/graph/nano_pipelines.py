@@ -238,7 +238,7 @@ class NanoGraphRAGIndexingPipeline(GraphRAGIndexingPipeline):
     """GraphRAG specific indexing pipeline"""
 
     prompts: dict[str, str] = {}
-
+    """
     @classmethod
     def get_user_settings(cls) -> dict:
         try:
@@ -259,7 +259,7 @@ class NanoGraphRAGIndexingPipeline(GraphRAGIndexingPipeline):
         except ImportError as e:
             print(e)
             return {}
-
+    """
     def call_graphrag_index(self, graph_id: str, docs: list[Document]):
         from nano_graphrag.prompt import PROMPTS
 
